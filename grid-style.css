@@ -1,6 +1,23 @@
 body{
-    padding: 100px 500px;
+    padding: 10px 100px;
     background: #cbbeee;
+}
+.nav{
+    background: hsl(0, 53%, 43%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    padding: 10px 50px
+}
+a{
+    color: hsl(0, 29%, 88%);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 700;
+}
+.index-link{
+    margin-right: 100px;
 }
 .title{
     background: red;
@@ -41,23 +58,3 @@ body{
     display: grid;
 }
 
-
-/* @media only screen and (max-width: 600px) {
-    body{
-        padding: 100px;
-    }
-    .grid-box{
-        gap: 5px;
-        display: grid;
-    }
-    .grid-box > div{
-        text-align: center;
-        height: 80px;
-        padding: 20px;
-        grid-template-rows: repeat(4, 1fr 1fr 1fr 1fr 1fr 1fr);
-    }
-    .aside1, .aside2{
-        height: unset !important;
-    }
-
-} */
