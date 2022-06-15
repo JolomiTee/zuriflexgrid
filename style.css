@@ -4,6 +4,7 @@
 body{
     font-size: 15px;
     line-height: 1.5rem;
+    padding: 10px;
 }
 .nav{
     background: hsl(0, 53%, 43%);
@@ -21,11 +22,12 @@ a{
 }
 .index-link{
     margin-right: 30px;
-    margin-left: 50px;
 }
 .main{
     display: flex;
-    padding: 0 15px;
+    padding: 50px 230px;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .type{
@@ -78,15 +80,60 @@ button:hover{
     border: 1px solid hsl(0, 0%, 95%);
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 425px){
     .main{
         flex-direction: column;
-        margin: 5px;
+        padding: 10px 20px;
+    }
+    .type p{
+        margin-bottom: 15px;
     }
 }
-@media only screen and (max-width: 1440px){
-    .main{
-        flex-direction: row;
-        margin: 100px;
+
+
+/* Grid page */
+.title{
+    background: red;
+    grid-column: 1/4;
+    grid-row: 1/5;
+}
+.logo{
+    background: yellow;
+    grid-column: 4/6;
+    grid-row: 1/5;
+}
+.content{
+    background: green;
+    grid-row: 5/7;
+    grid-column: 1/3;
+}
+.aside1{
+    background: blue;
+    grid-row: 5/6;
+    grid-column: 3/6;
+}
+.aside2{
+    background: rgb(47, 47, 134);
+    grid-column: 3/6;
+}
+.grid-box > div{
+    text-align: center;
+    border-radius: 8px;
+    height: 200px;
+    padding: 20px;
+    grid-template-rows: repeat(4, 1fr 1fr 1fr 1fr 1fr 1fr);
+}
+.aside1, .aside2{
+    height: unset !important;
+}
+.grid-box{
+    gap: 10px;
+    display: grid;
+}
+
+
+@media only screen and (min-width: 900px) {
+    .grid-box{
+        margin: 10px 100px;
     }
 }
